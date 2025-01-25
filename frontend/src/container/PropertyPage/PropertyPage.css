@@ -1,0 +1,18 @@
+
+.PropertyPage{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.searchBar-container{
+    background-color: red;
+    padding-top:10vh;
+    width: 40%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
