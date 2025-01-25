@@ -14,7 +14,7 @@ const fetchHousingData = async (req, res) => {
 // Analyze housing affordability
 const analyzeHousingAffordability = async (req, res) => {
     try {
-        const { location, income} = req.body;
+        const { location, income } = req.body;
         const analysis = await analyzeAffordability(location, income);
         res.status(200).json({ success: true, data: analysis });
     } catch (error) {
