@@ -10,11 +10,16 @@ const authenticate = (req, res, next) => {
         req.user = verified;
         next();
     } catch (error) {
-        console.error('Could not authenticate user');
-        res.status(400).json({ success: false, error: 'Invalid token' });
+        console.error('Could not authenticate user', error.message);
+        if (error.name === 'TokenExpiredError') {
+            return res.status(401).json({ success: false, message: 'Token expired' });
+        } else if (error.name === 'JsonWebTokenError') {
+            return res.status(400).json({ success: false, message: 'Invalid token' });
+        }
+        res.status(500).json({ success: false, message: 'Internal server error' });
     }
 };
 
-module.exports ={
+module.exports = {
     authenticate,
 };
