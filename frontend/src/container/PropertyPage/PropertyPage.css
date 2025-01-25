@@ -1,6 +1,6 @@
 
 .PropertyPage{
-    background-color: lightblue;
+    background-color: #212529;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -34,6 +34,11 @@
     align-items: center;
     padding: 20px 10px;
     min-width: 8rem;
-    background-color: lightsalmon;
+    background-color: white;
     border-radius: 50px;
+}
+
+.filter-btn p{
+    color: #212529;
+    font-weight: 700;
 }

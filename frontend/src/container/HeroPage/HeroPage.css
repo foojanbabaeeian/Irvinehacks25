@@ -1,0 +1,63 @@
+
+.HeroPage{
+    background-color: #212529;
+}
+
+.CallInAction-container{
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn{
+    color: #212529;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 50px;
+}
+
+.action-btn h2{
+    color: #212529;
+}
+
+
+.About-container{
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+        url("../../assets/house_img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    height: 100vh;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.content-container{
+    background-color: transparent;
+    height: 95vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 50px;
+
+}
+
+.content-container h2{
+    font-size: 60px;
+}
+
+.content-container p{
+    font-size: 20px;
+    line-height: 2em;
+}
