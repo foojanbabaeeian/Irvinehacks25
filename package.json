@@ -9,5 +9,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
+    "react-icons": "^5.4.0"
   }
 }

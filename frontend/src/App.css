@@ -28,3 +28,15 @@
 
   min-height: 100vh;
 }
+
+.page-title{
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-family: var(--font-base);
+}
+
