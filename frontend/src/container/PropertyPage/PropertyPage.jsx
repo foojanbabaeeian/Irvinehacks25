@@ -11,7 +11,7 @@ const PropertyPage = () => {
 
 
   return (
-    <div className="PropertyPage box__container">
+    <div className="PropertyPage box__container" id="PropertyPage">
       <h1 className="page-title">PropertyPage</h1>
 
       <div className="feature-Container">
@@ -22,15 +22,15 @@ const PropertyPage = () => {
 
         <div className="FilterOption-container">
             <div className="score-container filter-btn">
-              score
+              <p>score</p>
             </div>
 
             <div className="price-container filter-btn">
-              price
+              <p>price</p>
             </div>
 
             <div className="location-container filter-btn">
-              location
+              <p>location</p>
             </div>
         </div>
 

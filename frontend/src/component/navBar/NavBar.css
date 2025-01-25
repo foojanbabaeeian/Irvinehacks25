@@ -1,0 +1,55 @@
+.NavBar-container{
+    background: black;
+    padding-top: 1rem;
+    color: black;
+}
+
+.NavBar-wrapper{
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    background: var(--color-light-blue);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 0rem;
+    border-radius: 75px;
+
+    width: 80vw;
+    /* margin-top: 1em; */
+    margin-left: auto;
+    margin-right: auto;
+
+    position: sticky;
+    top: 1rem;  /* Makes the navbar stick to the top of the viewport */
+    z-index: 1000;  /* Ensures it stays above other content when scrolling */
+}
+
+.NavBar-logo{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px
+}
+
+.NavBar-links{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.NavBar-links li{
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.NavBar-links li:hover{
+    scale: 1.1;
+}

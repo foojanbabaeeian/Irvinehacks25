@@ -1,11 +1,13 @@
 import './App.css';
 import React from 'react';
 import { HeroPage, PropertyPage, Dashboard } from './container';
-
+import { NavBar } from './component';
 
 const App = () => (
   <div>
-    {/* <HeroPage/> */}
+    <NavBar/>
+
+    <HeroPage/>
     <PropertyPage/>
     {/* <Dashboard/>  */}
     
