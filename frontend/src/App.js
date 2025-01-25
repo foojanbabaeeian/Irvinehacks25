@@ -1,12 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { HeroPage, PropertyPage, Dashboard } from './container';
 
-function App() {
-  return (
-    <div className="App">
-      <h1> hello kinoko</h1>
-    </div>
-  );
-}
+
+const App = () => (
+  <div>
+    {/* <HeroPage/> */}
+    <PropertyPage/>
+    {/* <Dashboard/>  */}
+    
+  </div>
+);
 
 export default App;
