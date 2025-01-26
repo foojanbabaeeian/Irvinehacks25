@@ -1,4 +1,3 @@
-// filepath: /C:/Users/fooja/Documents/GitHub/Irvinehacks25/backend/services/housingService.js
 const axios = require('axios');
 
 const getHousingData = async (body) => {
@@ -16,6 +15,7 @@ const getHousingData = async (body) => {
     };
 
     const response = await axios.get(melissaPropURL, { params });
+    console.log('success finding property data!')
     return response.data;
 };
 
