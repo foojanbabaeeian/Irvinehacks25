@@ -6,6 +6,7 @@ const router = express.Router();
 // router.get('/data', fetchHousingData);
 
 router.post('/data', fetchHousingData);
+router.get('/data', fetchHousingData);
 
 // Route to analyze housing affordability
 router.post('/affordability', analyzeHousingAffordability);
