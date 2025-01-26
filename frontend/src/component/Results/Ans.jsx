@@ -1,28 +1,40 @@
 import React, { useEffect, useState } from 'react';
+import './Ans.css';
 
-function Results() {
-  const [propertyData, setPropertyData] = useState(null);
+function Recommendations() {
+  const [recommendations, setRecommendations] = useState(null);
 
   useEffect(() => {
-    const data = JSON.parse(localStorage.getItem('propertyAnalysis'));
-    setPropertyData(data);
+    const storedRecommendations = localStorage.getItem('propertyData');
+    if (storedRecommendations) {
+      setRecommendations(JSON.parse(storedRecommendations));
+    }
   }, []);
 
   return (
-    <div>
-      <h1>Property Analysis Results</h1>
-      {propertyData ? (
-        <div>
-          <h2>Address: {propertyData.propertyDetails.Property.Address.Full}</h2>
-          <p>Estimated Value: ${propertyData.propertyDetails.Property.EstimatedValue}</p>
-          <p>Affordable: {propertyData.affordabilityAnalysis.affordable ? 'Yes' : 'No'}</p>
-          <p>Affordability Score: {propertyData.affordabilityAnalysis.affordabilityScore}%</p>
+    <div className="AddressInput-container">
+      <h1>Recommended Properties</h1>
+      {recommendations ? (
+        <div className="result-container">
+          {recommendations.length > 0 ? (
+            recommendations.map((property, index) => (
+              <div key={index} className="property-card">
+                <h3>{property.name || 'No Name Available'}</h3>
+                <p>Location: {property.location || 'Unknown'}</p>
+                <p>Price: ${property.price || 'N/A'}</p>
+                <p>Bedrooms: {property.bedrooms || 'N/A'}</p>
+                <p>Bathrooms: {property.bathrooms || 'N/A'}</p>
+              </div>
+            ))
+          ) : (
+            <p>No recommendations found based on your criteria.</p>
+          )}
         </div>
       ) : (
-        <p>No data available.</p>
+        <p>Loading recommendations...</p>
       )}
     </div>
   );
 }
 
-export default Results;
+export default Recommendations;
