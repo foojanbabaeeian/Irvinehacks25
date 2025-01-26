@@ -52,9 +52,9 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./AddressInput.css";
-import { callApi } from '../../api';
+import { callApi } from "../../api";
 
 function AddressInput() {
   const [address, setAddress] = useState("");
@@ -67,27 +67,42 @@ function AddressInput() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    localStorage.setItem('currentAddress', address);
+    setError(null); // Clear previous errors
+    setResult(null); // Clear previous result
+    localStorage.setItem("currentAddress", address);
     try {
       const result = await callApi(address);
-      console.log('API response:', result);
+      console.log("API response:", result);
+      setResult(result); // Save the result to state
     } catch (error) {
-      setError('Failed to call API');
+      setError("Failed to call API :333");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={address}
-        onChange={handleChange}
-        placeholder="Enter address"
-      />
-      <button type="submit">Submit</button>
+    <div className="AddressInput-container">
+      <form className="form-container" onSubmit={handleSubmit}>
+        <input
+          className="input-container"
+          type="text"
+          value={address}
+          onChange={handleChange}
+          placeholder="Enter address"
+        />
+        <div className="submitBtn-container">
+          <button className="submit-btn" type="submit">Submit</button>
+        </div>
+      </form>
       {error && <p className="error">{error}</p>}
-    </form>
+      {result && (
+        <div className="result-container">
+          <h2>Property Information:</h2>
+          <pre><p>{JSON.stringify(result, null, 2)}</p></pre>
+        </div>
+      )}
+    </div>
   );
 }
 
 export default AddressInput;
+
