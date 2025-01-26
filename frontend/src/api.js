@@ -2,7 +2,7 @@ const API_URL = 'http://localhost:5001';
 
 export const callApi = async (address) => {
     try {
-        const response = await fetch(`${API_URL}/api/endpoint`, {
+        const response = await fetch(`${API_URL}/api/housing/data`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -13,6 +13,17 @@ export const callApi = async (address) => {
         return data;
     } catch (error) {
         console.error('Error calling API:', error);
+        throw error;
+    }
+};
+
+export const fetchPropertyData = async (address) => {
+    try {
+        const response = await fetch(`${API_URL}/api/housing/data?address=${encodeURIComponent(address)}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching property data:', error);
         throw error;
     }
 };

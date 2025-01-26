@@ -1,14 +1,14 @@
+// filepath: /C:/Users/fooja/Documents/GitHub/Irvinehacks25/backend/routes/housingRoutes.js
 const express = require('express');
-const {
-  propertyIntelligence,
-  locationAnalysis,
-  marketAssessment,
-} = require('../controllers/housingControllers');
-
+const { fetchHousingData, analyzeHousingAffordability } = require('../controllers/housingController');
 const router = express.Router();
 
-router.get('/property-intelligence', propertyIntelligence);
-router.get('/location-analysis', locationAnalysis);
-router.get('/market-assessment', marketAssessment);
+// Route to fetch housing data
+// router.get('/data', fetchHousingData);
+
+router.post('/data', fetchHousingData);
+
+// Route to analyze housing affordability
+router.post('/affordability', analyzeHousingAffordability);
 
 module.exports = router;

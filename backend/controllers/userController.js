@@ -10,21 +10,32 @@ const registerUser = async (req, res) => {
     }
 };
 
-const loginUser = async (req, res) => {
-    try {
-        const token = await loginUser(req.body);
-        req.session.save(() => {
-            req.session.user_id = user.id;
-            req.session.logged_in = true;
-            res.status(200).json({ success: true, token});
+// const loginUser = async (req, res) => {
+//     try {
+//         const token = await loginUser(req.body);
+//         req.session.save(() => {
+//             req.session.user_id = user.id;
+//             req.session.logged_in = true;
+//             res.status(200).json({ success: true, token });
+//         });
+//     } catch (error) {
+//         console.error('Could not log in user');
+//         res.status(500).json({ success: false, error: 'An error occurred' });
+//     }
+// };
+
+const logoutUser = (req, res) => {
+    if (req.session.logged_in) {
+        req.session.destroy(() => {
+            res.status(204).end();
         });
-    } catch (error) {
-        console.error('Could not log in user');
-        res.status(500).json({ success: false, error: 'An error occurred' });
+    } else {
+        res.status(404).json({ success: false, error: 'No active session found' });
     }
 };
 
 module.exports = {
     registerUser,
-    loginUser,
+    // loginUser,
+    logoutUser,
 };
