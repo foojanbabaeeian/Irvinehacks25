@@ -1,4 +1,3 @@
-// filepath: /C:/Users/fooja/Documents/GitHub/Irvinehacks25/backend/controllers/housingController.js
 const { getHousingData, analyzeAffordability } = require('../services/housingService');
 
 // Fetch housing data
