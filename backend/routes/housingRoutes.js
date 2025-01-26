@@ -1,11 +1,14 @@
 const express = require('express');
-const { fetchHousingData, calculateAffordability } = require('../controllers/housingController');
+const {
+  propertyIntelligence,
+  locationAnalysis,
+  marketAssessment,
+} = require('../controllers/housingControllers');
+
 const router = express.Router();
 
-// Route to fetch housing data
-router.get('/data', fetchHousingData);
-
-// Route to calculate affordability
-router.post('/affordability', calculateAffordability);
+router.get('/property-intelligence', propertyIntelligence);
+router.get('/location-analysis', locationAnalysis);
+router.get('/market-assessment', marketAssessment);
 
 module.exports = router;
