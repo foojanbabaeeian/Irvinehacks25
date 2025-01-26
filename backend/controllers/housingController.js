@@ -25,7 +25,6 @@ const analyzeHousingAffordability = async (req, res) => {
 };
 
 module.exports = {
-  propertyIntelligence,
-  locationAnalysis,
-  marketAssessment,
+  fetchHousingData,
+  analyzeHousingAffordability,
 };
