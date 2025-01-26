@@ -1,15 +1,17 @@
-const { getHousingData, analyzeAffordability} = require('../services/housingService');
+// filepath: /C:/Users/fooja/Documents/GitHub/Irvinehacks25/backend/controllers/housingController.js
+const { getHousingData, analyzeAffordability } = require('../services/housingService');
 
 // Fetch housing data
 const fetchHousingData = async (req, res) => {
     try {
-        const data = await getHousingData(req.query);
+        const data = await getHousingData(req.body);
         res.status(200).json({ success: true, data });
     } catch (error) {
-        console.error('Could not fetch housing data');
-        res.status(500).json({error: 'An error occurred'});
+        console.error('Could not fetch housing data')
+        console.log(error)
+        res.status(500).json({ error: error });
     }
-}
+};
 
 // Analyze housing affordability
 const analyzeHousingAffordability = async (req, res) => {
@@ -21,7 +23,7 @@ const analyzeHousingAffordability = async (req, res) => {
         console.error('Could not analyze housing affordability');
         res.status(500).json({ success: false, error: 'An error occurred' });
     }
-}
+};
 
 module.exports = {
     fetchHousingData,
