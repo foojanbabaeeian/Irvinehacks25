@@ -1,0 +1,25 @@
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+import joblib
+
+# Load your dataset (replace 'your_dataset.csv' with the actual file name)
+# Ensure the dataset contains numeric columns for scaling
+data = pd.read_csv('your_dataset.csv')
+
+# Select relevant numeric features for scaling
+# Replace these column names with the correct ones from your dataset
+features = ['income', 'credit_score', 'bedrooms', 'bathrooms', 'budget']
+
+# Extract the feature columns
+X = data[features]
+
+# Initialize the StandardScaler
+scaler = StandardScaler()
+
+# Fit the scaler to the feature data and transform it
+X_scaled = scaler.fit_transform(X)
+
+# Save the scaler to a .pkl file for later use
+joblib.dump(scaler, 'scaler.pkl')
+
+print("Scaler saved successfully as scaler.pkl")

@@ -27,3 +27,20 @@ export const fetchPropertyData = async (address) => {
         throw error;
     }
 };
+
+export const predictPropertyPrice = async (features) => {
+    try {
+        const response = await fetch(`${API_URL}/api/svm/predict`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ features }),
+        });
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error predicting price:', error);
+        throw error;
+    }
+};

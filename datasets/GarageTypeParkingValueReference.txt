@@ -1,0 +1,15 @@
+Garage Type Code     Code Description
+       0             No Garage
+       4             Pole Building Garage
+       11            Garage, Attached
+       12            Garage, Detached
+       14            Garage, Finished
+       19            Detached, Finished
+       20            Detached, Unfinished
+       21            Attached, Finished
+       22            Attached, Unfinished
+       30            Carport (Unspecified)
+       40            Garage, Basement
+       52            Garage, Tuckunder
+       53            Garage, Built-in
+       999           Type Not Specified

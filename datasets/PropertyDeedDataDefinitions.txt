@@ -1,0 +1,17 @@
+Column Name       Type         	Column Definition 
+RecordID          int          	Unique identifier of the record 
+MAK               bigint       	Melissa Address Key (MAK) is a random ten-digit number assigned to unique addresses worldwide with no duplicates   
+DocumentTypeCode  varchar(4)   	Code identifying the type of document; grant, deed, quit claim, etc. A reference file for all possible codes are included in the zip file 
+PropertyAddress   varchar(50)  	Address of the record   
+Suite		  varchar(20)  	Suite of the address
+City              varchar(35)  	Name of the city as it should appear as part of the address   
+State             varchar(2)   	Two-character state, province, or territory abbreviation      
+ZipCode           varchar(5)   	Five-digit postal code used by the United States Postal Service       
+ZipCodePlus4      varchar(4)   	Four-digit code that represents deliver routes within delivery areas (extends the five-digit zip) 
+Latitude          decimal(18,6)	Latitude of the address   
+Longitude         decimal(18,6)	Longitude of the address   
+FIPSCode          varchar(5)   	Five-digit United States FIPS county code: State (2) + County Code (3)
+APN               varchar(45)  	Assessor's Parcel Number: a unique number assigned to real property by the tax assessor of the property's jurisdiction
+CensusKey         varchar(16)  	Fifteen or sixteen-digit key that represents: State (2) + County (3) + Tract (6) + Block Group Number (4) + Optional Block Suffix (1). The suffix is used to indicate if any changes were made the to Block Group Number 
+RecordingDate     varchar(10)  	Date that the deed to the property was transferred: MM-DD-YYYY
+SalesPrice        int          	Price at which the property was sold  

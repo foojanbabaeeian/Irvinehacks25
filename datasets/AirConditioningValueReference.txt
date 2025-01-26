@@ -1,0 +1,15 @@
+Air Conditioning Code	Code Description
+	C		Central
+	E		Evaporative Cooler
+	F		Office only
+	I		Geo-Thermal
+	K		Packaged Unit
+	L		Window\Unit
+	N		None
+	O		Other
+	P		Partial
+	Q		Chilled Water
+	R		Refrigeration
+	V		Ventilation
+	W		Wall
+	Y		Yes

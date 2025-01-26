@@ -1,0 +1,61 @@
+import pandas as pd
+
+# Load datasets
+deed_data = pd.read_csv('datasets/propertydeeddata.csv')
+assessment_data = pd.read_csv('datasets/propertyassessmentdata.csv')
+
+# Merge datasets on the common column 'MAK'
+merged_data = pd.merge(deed_data, assessment_data, on='MAK', how='inner')
+
+# Drop unnecessary columns
+merged_data.drop(columns=['PropertyAddress', 'City', 'State', 'ZipCode', 'ZipCodePlus4', 'RecordingDate', 'CensusKey', 'CensusKeyDecennial'], inplace=True)
+
+
+from sklearn.preprocessing import LabelEncoder
+from sklearn.impute import SimpleImputer
+
+# Encode categorical variables
+label_encoder = LabelEncoder()
+merged_data['CountyLandUseDescription'] = label_encoder.fit_transform(merged_data['CountyLandUseDescription'])
+
+# Fill missing values with mean for numerical data
+imputer = SimpleImputer(strategy='mean')
+merged_data.iloc[:, :] = imputer.fit_transform(merged_data)
+X = merged_data.drop(columns=['SalesPrice'])
+y = merged_data['SalesPrice']
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+
+from sklearn.svm import SVR
+from sklearn.preprocessing import StandardScaler
+
+# Standardize features
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# Train the model
+svm_model = SVR(kernel='rbf', C=100, gamma=0.1, epsilon=0.1)
+svm_model.fit(X_train_scaled, y_train)
+
+
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+y_pred = svm_model.predict(X_test_scaled)
+
+print("Mean Absolute Error (MAE):", mean_absolute_error(y_test, y_pred))
+print("Mean Squared Error (MSE):", mean_squared_error(y_test, y_pred))
+print("R-Squared (R2):", r2_score(y_test, y_pred))
+
+
+new_data = X_test_scaled[:5]  # Example test cases
+predictions = svm_model.predict(new_data)
+print("Predicted Sales Prices:", predictions)
+
+
+import joblib
+
+joblib.dump(svm_model, 'real_estate_svm_model.pkl')

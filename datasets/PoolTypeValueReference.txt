@@ -1,0 +1,11 @@
+Pool Code       Code Description
+  101           Public/Municipal/Commercial
+  110           Above-ground Pool
+  121           In-ground Vinyl Pool
+  130           Indoor Pool
+  401           Pool (Unspecified), Heated
+  402           Pool, Solar Heated
+  502           Pool w/Hot Tub/Spa
+  610           Pool (Unspecified), Enclosed
+  904           Spa/Hot Tub (only)
+  999           Type Unspecified

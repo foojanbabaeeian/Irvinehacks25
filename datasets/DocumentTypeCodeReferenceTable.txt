@@ -1,0 +1,76 @@
+DocumentTypeCode  Description
+    DTAA          Assignment of Sub Agreement of Sale
+    DTAB          Assignment of Sub Lease
+    DTAC          Assignment of Commercial Lease 
+    DTAD          Administrator's Deed
+    DTAF          Affidavit
+    DTAG          Agreement of Sale
+    DTAH          Assessor Sales History
+    DTAR          Assignment of Agreement of Sale 
+    DTAS          Assignment Deed
+    DTAT          Affidavit of Trust or Trust Agreement
+    DTAU          Assignment of Sub Commercial Lease 
+    DTBD          Beneficiary Deed
+    DTBS          Bargain and Sale Deed
+    DTCA          Commissioners Assignment of Lease 
+    DTCD          Condominium Deed 
+    DTCH          Cash Sale Deed
+    DTCL          Commercial Lease 
+    DTCM          Commissioner’s Deed
+    DTCN          Cancellation of Agreement of Sale 
+    DTCO          Conservator’s Deed
+    DTCP          Corporation Deed
+    DTCR          Correction Deed 
+    DTCS          Contract of Sale 
+    DTCT          Certificate of Transfer
+    DTDB          Deed of Distribution 
+    DTDC          Declaration
+    DTDD          Transfer on Death Deed 
+    DTDE          Deed
+    DTDG          Deed of Guardian
+    DTAD          Affidavit of Death
+    DTDL          Deed in Lieu of Foreclosure
+    DTDS          Distress Sale
+    DTDT          Affidavit of Death
+    DTEC          Exchange
+    DTEX          Executor’s Deed
+    DTFC          Foreclosure
+    DTFD          Fiduciary Deed 
+    DTGD          Grant Deed
+    DTGF          Gift Deed
+    DTGR          Ground Lease
+    DTID          Individual Deed
+    DTIT          Intrafamily Transfer
+    DTJT          Joint Tenancy Deed
+    DTLA          Legal Action/Court Order
+    DTLC          Leasehold Conv. With Agreement of Sale (Fee Purchase) 
+    DTLD          Land Contract
+    DTLE          Lease 
+    DTLH          Assignment of Lease (Leasehold Sale) 
+    DTLS          Leasehold Conv. with an Agreement of Sale 
+    DTLT          Land Court
+    DTLW          Limited Warranty Deed 
+    DTMD          Special Master Deed 
+    DTOT          Other
+    DTPA          Public Action
+    DTPD          Partnership Deed
+    DTPR          Personal Representatives Deed Deed
+    DTQC          Quit Claim Deed
+    DTRA          Release/Satis. Of Agrem. Of Sale (Fee Property)
+    DTRC          Receiver’s Deed
+    DTRD          Redemption Deed
+    DTRF          Referee's Deed - Used To Transfer Property Pursuant To A Foreclosure Sale In New York Counties
+    DTRL          Release/Satisfaction of Agreement of Sale (Leasehold) 
+    DTRR          Re-recorded Document
+    DTRS          REO Sale (REO Out)
+    DTSA          Sub Agreement of Sale 
+    DTSC          Sub Commercial Lease 
+    DTSD          Sheriff’s Deed
+    DTSL          Sub Lease  
+    DTST          Affidavit Death of Trustee/Successor Trustee
+    DTSV          Survivorship Deed
+    DTSW          Special Warranty Deed
+    DTTD          Trustee’s Deed
+    DTVL          Vendor’s Lien
+    DTWD          Warranty Deed 
+    DTXX          Transaction History Record
