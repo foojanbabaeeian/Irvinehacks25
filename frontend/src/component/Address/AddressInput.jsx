@@ -71,6 +71,10 @@ function AddressInput() {
     try {
       const result = await callApi(address);
       console.log('API response:', result);
+
+      const propertyResult = await fetchPropertyData(address);
+      setPropertyData(propertyResult);
+      console.log('Property data:', propertyResult);
     } catch (error) {
       setError('Failed to call API');
     }
