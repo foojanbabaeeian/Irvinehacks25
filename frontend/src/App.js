@@ -1,17 +1,31 @@
 import './App.css';
-import React from 'react';
 import { HeroPage, PropertyPage, Dashboard } from './container';
 import { NavBar } from './component';
+import React, { useEffect, useState } from 'react';
+import { fetchBackendData } from './api';
 
-const App = () => (
-  <div>
-    <NavBar/>
+const App = () => {
+  const [data, setData] = useState(null);
 
-    <HeroPage/>
-    <PropertyPage/>
-    {/* <Dashboard/>  */}
-    
-  </div>
-);
+    useEffect(() => {
+        const getData = async () => {
+            const result = await fetchBackendData();
+            setData(result);
+        };
+
+        getData();
+    }, []);
+
+    return (
+      <div>
+        <NavBar/>
+
+        <HeroPage/>
+        <PropertyPage/>
+        {/* <Dashboard/>  */}
+        
+      </div>
+    );
+};
 
 export default App;

@@ -22,9 +22,16 @@
 // dotenv.config();
 
 const express = require('express');
+const cors = require('cors');
+
 // const housingRoutes = require('./routes/housingRoutes');
 const app = express();
 
+
+
+app.use(cors()); 
+app.use(express.json()); // Middleware for parsing JSON
+// app.use('/api/housing', housingRoutes);
 app.get('/', (req, res) => {
     res.send('Backend is running!');
 });
@@ -33,9 +40,6 @@ const PORT = 5001;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
-app.use(cors()); 
-app.use(express.json()); // Middleware for parsing JSON
-app.use('/api/housing', housingRoutes);
 
 
 app.get("/property", async (req, res) => {
