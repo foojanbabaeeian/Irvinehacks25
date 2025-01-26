@@ -38,10 +38,17 @@ function Quiz() {
         bathrooms: localStorage.getItem('bathrooms'),
         budget: localStorage.getItem('budget'),
       };
-      await callApi(preferences);
-      navigate('/recommendations');
+  
+      try {
+        const result = await callApi(preferences);
+        localStorage.setItem('propertyData', JSON.stringify(result));
+        navigate('/recommendations');
+      } catch (error) {
+        setError("Failed to fetch property data. Please try again.");
+      }
     }
   };
+  
 
   const handleChange = (e) => {
     setInputValue(e.target.value);

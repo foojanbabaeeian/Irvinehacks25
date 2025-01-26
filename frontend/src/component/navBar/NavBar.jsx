@@ -9,7 +9,7 @@ const NavBar = () => {
       <nav className="NavBar-wrapper">
         <div className="NavBar-logo">
             <FaHouseChimneyUser size={50}/>
-            <h3>Find Your Affordable Home</h3>
+            <h3>AffordaHome</h3>
         </div>
 
 
