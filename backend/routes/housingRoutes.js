@@ -1,4 +1,3 @@
-// filepath: /C:/Users/fooja/Documents/GitHub/Irvinehacks25/backend/routes/housingRoutes.js
 const express = require('express');
 const { fetchHousingData, analyzeHousingAffordability } = require('../controllers/housingController');
 const router = express.Router();
