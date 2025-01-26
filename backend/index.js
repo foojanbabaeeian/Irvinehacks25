@@ -36,6 +36,14 @@ app.get('/', (req, res) => {
     res.send('Backend is running!');
 });
 
+
+app.post('/api/endpoint', (req, res) => {
+    const { address } = req.body;
+    // Handle the address data here
+    res.json({ message: 'Address received', address });
+});
+
+
 const PORT = 5001;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

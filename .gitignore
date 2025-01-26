@@ -2,3 +2,4 @@ node_modules
 .env
 firebase.json
 env.txt
+env_ex.txt
