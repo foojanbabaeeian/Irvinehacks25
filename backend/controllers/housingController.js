@@ -12,7 +12,7 @@ const propertyIntelligence = async (req, res) => {
   }
 
   try {
-    const propertyApiUrl = "https://api.propertyweb.com/v1/properties";
+    const propertyApiUrl = "https://property.melissadata.net/v4/WEB/LookupProperty/";
     const params = {
       apiKey: process.env.PROPERTY_API_KEY,
       address,
