@@ -14,16 +14,15 @@ const NavBar = () => {
 
 
         <ul className="NavBar-links">
-            <li><a href="#PropertyPage">Property Page</a></li>
-            <li><a href="#SearchHistory">Search History</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/property">Property Page</a></li>
+          <li><a href="/quiz">Take the Quiz</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
         </ul>
 
         <div className="NavBar-user">
             <FaRegUserCircle size={40}/>
         </div>
-
-
-
 
 
       </nav>

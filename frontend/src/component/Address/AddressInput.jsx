@@ -74,8 +74,11 @@ function AddressInput() {
       const result = await callApi(address);
       console.log("API response:", result);
       setResult(result); // Save the result to state
+      localStorage.setItem('propertyData', JSON.stringify(result));
     } catch (error) {
       setError("Failed to call API :333");
+      console.error('Error:', error);
+
     }
   };
 

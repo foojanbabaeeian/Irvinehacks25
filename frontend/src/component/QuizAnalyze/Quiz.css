@@ -1,0 +1,65 @@
+.AddressInput-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: lightcoral; */
+  gap:20px;
+
+  padding: 50px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+
+.submitBtn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-btn{
+  width: 10rem;
+  height: 3rem;
+  border-radius: 50px;
+  border: none;
+  color: black;
+  
+}
+
+input{
+  color: black;
+}
+
+
+.input-container{
+  background-color: white;
+  width: 50vw;
+  height: 10vh;
+  border-radius: 50px;
+  padding: 3rem;
+  text-align: left;
+}
+
+
+.result-container{
+  background: white;
+  width: 400px;
+  min-height: 200px;
+
+  padding: 40px;
+  border-radius: 40px;
+}
+
+.result-container h2{
+  color: black;
+  font-weight: 600;
+}
+
+.result-container p{
+  color: black;
+}

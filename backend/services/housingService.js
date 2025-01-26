@@ -1,4 +1,3 @@
-// filepath: /C:/Users/fooja/Documents/GitHub/Irvinehacks25/backend/services/housingService.js
 const axios = require('axios');
 
 const getHousingData = async (body) => {
@@ -14,14 +13,28 @@ const getHousingData = async (body) => {
         format: "json",
         ff: address,
     };
-
-    const response = await axios.get(melissaPropURL, { params });
-    return response.data;
+    try {
+        const response = await axios.get(melissaPropURL, { params });
+        console.log('success finding property data!')
+        
+        return response.data;
+    } catch(error) {
+        console.error('Error fetching property data:', error.message);
+        throw new Error('Error fetching property data');
+    }
 };
 
 const analyzeAffordability = async (location, income) => {
     // Implement your affordability analysis logic here
-    return { location, income, affordable: true };
+    if (!location || !income) {
+        throw new Error('Location and income are required');
+    }
+    return {
+        location,
+        income,
+        affordable: income > 50000, // Simple mock logic
+        affordabilityScore: (income / 100000) * 100 // Mock score
+      };
 };
 
 module.exports = {
