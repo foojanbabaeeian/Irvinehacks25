@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import "./AddressInput.css"
+
 
 function AddressInput() {
   const [address, setAddress] = useState('');
@@ -28,8 +30,8 @@ function AddressInput() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="AddressInput-container">
+      <header className="AddressInput-wrapper">
         <h1>Property Information Search</h1>
         <form onSubmit={handleSubmit}>
           <label>
