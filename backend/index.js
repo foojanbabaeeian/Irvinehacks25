@@ -5,7 +5,7 @@ const authRoutes = require('./routes/authRoutes');
 const housingRoutes = require('./routes/housingRoutes');
 const userRoutes = require('./routes/userRoutes');
 
-DB_URL = 'mongodb://localhost:27017/housing';
+DB_URL = 'mongodb://localhost:27017';
 
 const mongoose = require('mongoose');
 
